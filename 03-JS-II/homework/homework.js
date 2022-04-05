@@ -27,10 +27,10 @@ function conection(status) {
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1) {
-    return 'Online'
+    return "Online"
   } if (status === 2) {
-    return 'Away'
-  } else {return 'offline'}
+    return "Away"
+  } else {return "Offline"}
 }
 
 function saludo(idioma) {
@@ -60,19 +60,49 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  var respuesta
+  switch (color) {
+    case "blue":
+      respuesta = "This is blue";
+      break;
+    case "red":
+      respuesta = "This is red";
+      break;
+    case "green":
+      respuesta = "Thisa is green";
+      break;
+    case "orange":
+      respuesta = "This is orange";
+      break;
+    default:
+      respuesta = "Color not found"
+      break;
+  }
+  return respuesta
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-}
+  if (numero === 10 || numero === 5) {
+    return "true"
+  }
+  else {
+    return "false"
+  };
+};
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-}
+  if (numero > 20 && numero < 50) {
+    return "true"
+  } else {
+    return "false"
+  };
+};
 
 function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
@@ -82,6 +112,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  return numero % 1 === 0;
 }
 
 function fizzBuzz(numero) {
@@ -89,6 +120,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  
 }
 
 function operadoresLogicos(num1, num2, num3) {
