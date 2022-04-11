@@ -160,8 +160,8 @@ function todosIguales(arreglo) {
     if (arreglo[i] !== arreglo[i + 1]) {
       return false
     }
-    else return true
   }
+   return true
 } 
 
 
